@@ -1,6 +1,8 @@
 import { Http } from "../../conf/GlobalConfig";
 import {changeloading} from './loading.action';
-import { changeNotify } from "./notify.action";
+
+
+
 
 export const actionTypes = {
     GET_TOKEN : 'GET_TOKEN',
@@ -47,6 +49,12 @@ export const getUserToken = () => dispatch => {
         dispatch(getToken(token));
     }
 }
+export const showWelcomeMessage = () => {
+  return {
+    type: "SHOW_WELCOME_MESSAGE",
+    message: "Bem-vindo!"
+  };
+};
 
  export const setUserToken = (token) => dispatch => {
     localStorage.setItem('access_token', token);
@@ -62,7 +70,7 @@ export const getUserToken = () => dispatch => {
     return Http.post('/oauth/token', {
       grant_type: 'password',
       client_id: '2',
-      client_secret: 'dGvpciyXHSmHhx3hS8K5oy4KGsGwKRseSg9yjPl4',
+      client_secret: '9opzWmzBnIaMgIf2k7cbDSZJggCgmLIpNtHDROkG',
       username: credentials.username,
       password: credentials.password,
     })
@@ -71,35 +79,16 @@ export const getUserToken = () => dispatch => {
         open: false,
         msg: ''
       }));
+      
       if(typeof res !== 'undefined'){
         dispatch(setUserToken(res.data.access_token));
+       
         
       }
     })
-    .catch(error => {
-      dispatch(changeloading({
-        open: false,
-        msg: ''
-      }));
-      if(error.reponse){
-        if(error.reponse.status === 401 || error.reponse.status === 400 ){
-            dispatch(changeNotify({
-              open:true,
-              msg: 'E-mail ou Senha incorretos',
-              class: error
-            }))
-
-        }
-      }else{
-        dispatch(changeNotify({
-          open:true,
-          msg: 'Error ao efetuar login',
-          class: error
-        }))
-
-      }
+   
  
-    });
+    
   };
 };
 

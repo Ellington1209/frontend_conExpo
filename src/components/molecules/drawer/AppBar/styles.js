@@ -7,11 +7,16 @@ export const Container = styled.div`
     background-color: rgb(240, 238, 238);
   }
 .logo{
-  padding:10px;
-  left:55px;
-  margin-top:15px;
+  padding:15px;
+  left:5px;
+  margin-top:35px;
+  margin-bottom:10px;
   position:fixed;
   
+}
+.logo3{
+    width: 180px;
+    height: 55px;
 }
 .name{
   color:black;
@@ -22,10 +27,13 @@ export const Container = styled.div`
       background-color: ${theme.colors.secondary};
     }
 
-    .MuiDrawer-paper svg, .MuiDrawer-paper {
+    .MuiDrawer-paper svg,  .MuiDrawer-paper {
       color: #FFF;
       font-size: 22px;
      
+    }
+    .MuiDrawer-paper :hover{
+      color: #FFF;
     }
 
     .MuiDivider-root {

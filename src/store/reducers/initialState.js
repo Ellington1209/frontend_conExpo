@@ -7,6 +7,7 @@ const initialState = {
             username: '',
             password: ''
     },
+    success: false
     },
     register:{
         data:{
@@ -21,14 +22,7 @@ const initialState = {
         open: false,
         msg : ''
     },
-    notify: {
-        open: false,
-        class: 'success',
-        vertical: 'top',
-        horizontal: 'center',
-        time: 'center',
-        msg: ''
-    }
+ 
 
 }
 

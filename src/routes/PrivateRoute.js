@@ -1,18 +1,14 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import Menu from '../menu';
+import { isAuthenticated } from '../utils/authHelp';
 
-function isLogin() {
-  if (sessionStorage.getItem("auth")) {
-    return true
-  }
-  return false;
-}
+
 
 
 function PrivateRoute({ children }) {
  
-  return !isLogin() ? <Menu>{children}</Menu> : <Navigate Componentto="/login" />;
+  return isAuthenticated() ? <Menu>{children}</Menu> : <Navigate to="/login" />;
 }
 
 

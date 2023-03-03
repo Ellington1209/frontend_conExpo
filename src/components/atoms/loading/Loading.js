@@ -41,6 +41,20 @@ const StyledModal = styled(Modal)({
 });
 
 class Loading extends Component {
+  componentDidMount() {
+    // Define um tempo limite de 5 segundos
+    this.timeout = setTimeout(() => {
+      this.props.changeloading({
+        open: false
+      });
+    }, 3000);
+  }
+
+  componentWillUnmount() {
+    // Limpa o tempo limite caso o componente seja desmontado
+    clearTimeout(this.timeout);
+  }
+
   handleClose = () => {
     this.props.changeloading({
       open:false

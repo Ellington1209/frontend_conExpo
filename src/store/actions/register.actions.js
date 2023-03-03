@@ -32,12 +32,15 @@ export const registerError = (payload) => ({
                 open:false
               
             }))
-            if(typeof res !== 'undefined'){
+            if(typeof res !== 'undefined'){               
                 if(res.data.error){
                     dispatch(registerError(res.data.error));
                 }
                 if(res.data.success){
-                    alert("cadastrado com sucesso")
+                    
+
+
+                    
                 }
                 dispatch(setUserToken(res.data.token));
                 dispatch(success(true))

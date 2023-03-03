@@ -1,7 +1,17 @@
-import  Axios from "axios";
+import Axios from "axios";
+import { getToken } from "../utils/authHelp";
 
-export const rootUrl = 'http://127.0.0.1:8000/';
+ const rootUrl = "http://localhost/backend/conExpo/public/";
 
-export const Http =  Axios.create({
-    baseURL: rootUrl
-})
+
+export const Http = Axios.create({
+  baseURL: rootUrl,
+});
+
+Http.interceptors.request.use(async (config) => {
+  const token = getToken();
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});

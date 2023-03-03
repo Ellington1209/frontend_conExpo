@@ -9,13 +9,17 @@ export default (state = initialState.register, { type, payload }) => {
   switch (type) {
 
   case actionTypes.CHANGE:
-    return { ...state, ...payload }
-
+    return { ...state, 
+        data:{
+          ...state.data,
+          ...payload 
+        }
+      }
     case actionTypes.SUCCESS:
-        return { ...state, ...payload }
+        return { ...state, success:payload }
 
         case actionTypes.ERROR:
-            return { ...state, ...payload }
+            return { ...state, error:payload }
 
   default:
     return state

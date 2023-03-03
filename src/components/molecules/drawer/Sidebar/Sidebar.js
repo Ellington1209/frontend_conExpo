@@ -3,16 +3,10 @@ import * as React from 'react';
 import { Drawer, List,  ListItem, ListItemButton, ListItemIcon, ListItemText, Box, styled, Collapse} from '@mui/material';
 import { ReactComponent as Dashboard } from '../../../../image/dashboard.svg';
 import { ReactComponent as Receitas } from '../../../../image/Vector.svg';
-import { ReactComponent as Pagamentos } from '../../../../image/cartaoPagamento.svg';
-import { ReactComponent as Acessos } from '../../../../image/acessos.svg';
-import { ReactComponent as Clientes } from '../../../../image/Usuarios.svg';
-import { ReactComponent as Display } from '../../../../image/QRcode.svg';
-import { ReactComponent as Pedidos } from '../../../../image/ReceiptFilled.svg';
-import { ReactComponent as Configuracao } from '../../../../image/SettingsFilled.svg';
-import { ReactComponent as Sair } from '../../../../image/LogoutFilled.svg';
+
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import Logo from '../../../../image/logo.svg'
+import Logo from '../../../../image/Logobranca.png'
 
 
 const drawerWidth = 238;
@@ -26,7 +20,7 @@ const perfilUsuario = {
       isSubmenu: false,
     },
     {
-      name:'Receitas',
+      name:'Aulas',
 
       icon: Receitas,
       route: '#',
@@ -45,105 +39,7 @@ const perfilUsuario = {
    
     
     },
-    {
-      name:'Pagamentos',
-      icon: Pagamentos,
-      route: '#',
-      isSubmenu: true,
-      submenu: [
-        {
-        name: 'Mesas Abertas',
-        submenuRoute: '/pagamentos/mesasAbertas'
-        },       
-        {
-        name: 'Eventos de Pagamento',
-        submenuRoute: '/pagamentos/eventosPagamento'
-        },
-        {
-        name: 'Histórico de Mesas',
-        submenuRoute: '/pagamentos/historicoMesas'
-        },
-    ],    
-    },
-    {
-      name:'Acessos',
-      icon: Acessos,
-      route: '#',
-      isSubmenu: true,
-      submenu: [
-        {
-        name: 'Usuários',
-        submenuRoute: '/acessos/usuarios'
-        },
-       
-        {
-        name: 'Perfis',
-        submenuRoute: '/acessos/perfis'
-        },
-
-    ],    
-    },
-    {
-      name:'Clientes',
-      icon: Clientes,
-      route: '#',
-      isSubmenu: true,
-      submenu: [
-        {
-        name: 'Estabelecimento',
-        submenuRoute: '/clientes/estabelecimento'
-        },       
-        {
-        name: 'Configuração de Pagamento',
-        submenuRoute: '/clientes/pagconfiguracao'
-        },
-        {
-        name: 'Consumidores',
-        submenuRoute: '/clientes/consumidores'
-        },
-
-    ],    
-    },
-    {
-      name: 'Gerador Display',
-      icon: Display,
-      route: '/display',
-      isSubmenu: false,
-    },
-    {
-      name: 'Pedidos de Display',
-      icon: Pedidos,
-      route: '/pedidos',
-      isSubmenu: false,
-    },
-    {
-      name:'Configuração',
-      icon: Configuracao,
-      route: '#',
-      isSubmenu: true,
-      submenu: [
-        {
-        name: 'Gráficas',
-        submenuRoute: '/configuracao/graficas'
-        },       
-        {
-        name: 'Tipos de Displays',
-        submenuRoute: '/configuracao/tiposDisplays'
-        },       
-    ],    
-    },
-    {
-      name: 'Termos e Politicas',
-      icon: Pedidos,
-      route: '/termos',
-      isSubmenu: false,
-    },
-    {
-      name: 'Sair',
-      icon: Sair,
-      route: '/#',
-      isSubmenu: false,
-    },
+   
   ],
   user: [
     {
@@ -202,8 +98,8 @@ const Sidebar = props => {
       open={open}
     >
        <DrawerHeader>   
-        <div class="logo">
-          <img src={Logo} />
+        <div className="logo">
+          <img className="logo3" src={Logo} />
         </div> 
         </DrawerHeader>
       <Box sx={{ overflow: 'auto' }}>

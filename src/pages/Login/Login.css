@@ -7,15 +7,15 @@
     justify-content: center;
 }
 .login{
-    background-image: url("../../image/login_brackgound.jpg");
-    width:650px;
-    height: 650px;
-    background-size: 100% 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* remover */
-    flex-direction: column;
-    padding-bottom: 130px;
+  position: relative;
+  background-color: aliceblue;
+  width: 650px;
+  height: 650px;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 130px;
 }
 .logo1{
     display: flex;
@@ -23,12 +23,29 @@
     justify-content: center; /* remover */
     flex-direction: column;
     margin-bottom: 40px;  
-    margin-top: 150px; 
+    margin-top: 100px; 
+}
+.logo2{
+    width: 240px;
+    height: 75px;
+   
+
 }
 .divInput{
     width: 70%;
     
    
+}
+.footer{
+    position: absolute;
+    left:5px;
+    bottom: 5px;
+
+
+}
+.footer1{
+    width: 40px;
+    height: 35px;
 }
 .button{
     width: 50%;

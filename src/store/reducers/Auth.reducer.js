@@ -13,11 +13,12 @@ const authReducer = (state = initialState.auth, action) => {
                 }
             }
         case actionTypes.GET_TOKEN:
-            return {
-                ...state,
-                ...action.token
-            }
-            default:
+            return { ...state, ...action.token}
+
+        case actionTypes.SUCCESS:
+            return { ...state, success:action }
+
+        default:
                 return state;
     }
 }

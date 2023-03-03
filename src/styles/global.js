@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components'
+import { createGlobalStyle, css } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -15,7 +15,8 @@ const GlobalStyles = createGlobalStyle`
       font-size: 62.5%;
     }
 
-    body, #root {
+    body,
+    #root {
       background-color: ${theme.bg.custom}!important;
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.small};
@@ -24,10 +25,13 @@ const GlobalStyles = createGlobalStyle`
       width: 100vw;
 
       overflow-x: hidden;
-
     }
+    .MuiAlert-message {
+      font-size: 14px;
+      
+    }
+
   `} 
 `;
 
 export default GlobalStyles;
-
