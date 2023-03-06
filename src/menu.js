@@ -1,18 +1,13 @@
+import { Box } from "@mui/material";
 import React from "react";
 import AvatarAppBar from "./components/molecules/drawer/AppBar/AppBar";
 
-
-
-
-const Menu = props => {
+const Menu = (props) => {
   return (
     <AvatarAppBar>
-     
-      <div >      
-        {props.children}
-      </div>
+      <Box>{props.children}</Box>
     </AvatarAppBar>
   );
-}
+};
 
 export default Menu;

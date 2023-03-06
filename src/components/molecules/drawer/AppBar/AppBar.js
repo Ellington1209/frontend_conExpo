@@ -1,14 +1,5 @@
 import * as React from "react";
-import {
-  Typography,
-  IconButton,
-  Toolbar,
-  Box,
-  Tooltip,
-  Avatar,
-  Menu,
-  MenuItem,
-} from "@mui/material";
+import { Typography, IconButton, Toolbar, Box, Tooltip, Avatar, Menu, MenuItem,} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Container, BoxAvatar } from "./styles";
 import { styled } from "@mui/material/styles";
@@ -85,6 +76,24 @@ function AvatarAppBar(props) {
     logoutRemoveToken();
     navigate("/login");
   };
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 960) {
+        setOpen(true);
+      } else {
+        setOpen(false);
+      }
+    };
+
+    handleResize(); // adicionando a verificação ao carregar a página
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleDrawerOpen = () => {
     setOpen(!open);
@@ -167,6 +176,5 @@ function AvatarAppBar(props) {
   );
 }
 const mapStateToProps = (store) => ({});
-
 
 export default connect(mapStateToProps)(AvatarAppBar);

@@ -75,12 +75,9 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 const Sidebar = props => {
   const { open } = props
   const perfil = 'admin'
-
   const [isExpand, setIsExpand] = React.useState(999)
-
-  const handleClickMenu = (index) => {
-    setIsExpand(state => index === state ? 999 : index)
-  }
+  const handleClickMenu = (index) => {setIsExpand(state => index === state ? 999 : index)}
+  
 
   return (
     <Drawer
@@ -98,9 +95,9 @@ const Sidebar = props => {
       open={open}
     >
        <DrawerHeader>   
-        <div className="logo">
+        <Box width={'100%'} height="80px"display='flex' flexDirection="column" marginTop="30px">
           <img className="logo3" src={Logo} />
-        </div> 
+        </Box> 
         </DrawerHeader>
       <Box sx={{ overflow: 'auto' }}>
         <List>
