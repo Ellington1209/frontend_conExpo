@@ -1,17 +1,15 @@
-import "./App.css";
-import {  BrowserRouter as Router} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme";
-import GlobalStyles from "./styles/global";
-
-import ProgressBar from "./components/atoms/circularProgress/ProgressBar";
 import { useState, useEffect } from "react";
 import { Provider } from "react-redux";
+
+import ProgressBar from "./components/atoms/circularProgress/ProgressBar";
 import store from "./store/store";
 import { AppRoutes } from "./routes/routes";
-
-
-
+import GlobalStyles from "./styles/global";
+import { Notify, Alert } from "./components";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,11 +22,15 @@ function App() {
 
   return (
     <Provider store={store}>
-      {isLoading ? (<ProgressBar />) : (
+      {isLoading ? (
+        <ProgressBar />
+      ) : (
         <Router>
           <ThemeProvider theme={theme}>
             <GlobalStyles />
-              <AppRoutes/>
+            <Alert />
+            <Notify />
+            <AppRoutes />
           </ThemeProvider>
         </Router>
       )}

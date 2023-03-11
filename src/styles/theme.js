@@ -42,7 +42,7 @@ const theme = {
     xxlarge: '5.6rem',
   },
   bg: {
-    primary: '#00522F',
+    primary: '#ffffff',
     secundary: '#ffffff',
     tertiary: '#FFFFFF',
     custom: '#FFFFFF'

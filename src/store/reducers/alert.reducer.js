@@ -1,13 +1,10 @@
-import { actionTypes } from '../actions/notify.actions'
+import { actionTypes } from '../actions/alert.action';
 
 const initialState = {
-    open:false,
-    horizontal: ' center',
-    vertical: 'top',
-    class: 'error',
-    time: 3000,
-    msg:'',
-
+    open: false,
+    class: 'success',
+    time:3000,
+    msg:''
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export

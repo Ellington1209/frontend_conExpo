@@ -42,7 +42,7 @@ const StyledModal = styled(Modal)({
 
 class Loading extends Component {
   componentDidMount() {
-    // Define um tempo limite de 5 segundos
+    // Define um tempo limite de 3 segundos
     this.timeout = setTimeout(() => {
       this.props.changeloading({
         open: false

@@ -20,7 +20,7 @@ const initialState = {
     },
     loading: {
         open: false,
-        msg : ''
+        msg : 'Carregando...'
     },
  
 

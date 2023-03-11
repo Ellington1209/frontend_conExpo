@@ -45,6 +45,7 @@ export default function Programacao() {
   };
 
   return (
+    
     <Box sx={{ width: "100%" }}>
       <Grid item xs={12} sm={6} md={4} padding={2}>
         <TypographyOne>Programação</TypographyOne>
