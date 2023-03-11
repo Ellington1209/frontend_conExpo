@@ -30,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
       font-size: 14px;
       
     }
+  
 
   `} 
 `;

@@ -21,6 +21,15 @@ export const Container = styled.div`
 .name{
   color:black;
 }
+.footer5{
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(219, 222, 222);
+}
+
   //SIDER BAR STYLES
   ${({ theme }) => css`
     .MuiDrawer-paper {
@@ -66,6 +75,9 @@ export const Container = styled.div`
     }
     .MuiCollapse-root .MuiListItemText-root {
       padding-left: 31px;
+    }
+    .MuiSvgIcon-root{
+      margin-bottom: 7px;
     }
   `}
 `;

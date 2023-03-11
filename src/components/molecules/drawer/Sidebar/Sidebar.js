@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import * as React from 'react';
 import { Drawer, List,  ListItem, ListItemButton, ListItemIcon, ListItemText, Box, styled, Collapse} from '@mui/material';
-import { ReactComponent as Dashboard } from '../../../../image/dashboard.svg';
-import { ReactComponent as Receitas } from '../../../../image/Vector.svg';
+import{ EventNote, ExpandLess, ExpandMore  }from '@mui/icons-material';
 
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
+
+
 import Logo from '../../../../image/Logobranca.png'
+import { Dashboard, PlayCircleFilled } from '@mui/icons-material';
 
 
 const drawerWidth = 238;
@@ -16,28 +16,40 @@ const perfilUsuario = {
     {
       name: 'Dashboard',
       icon: Dashboard,
-      route: 'dashboard',
+      route: '/dashboard',
+      isSubmenu: false,
+    },
+    // {
+    //   name:'Aulas',
+
+    //   icon: Receitas,
+    //   route: '#',
+    //   isSubmenu: true,
+    //   submenu: [
+    //     {
+    //     name: 'Visão Geral',
+    //     submenuRoute: '/receitas/visaoGeral'
+    //     },
+       
+    //     {
+    //     name: 'Mesas',
+    //     submenuRoute: '/receitas/mesas'
+    //     },
+    // ],
+   
+    
+    // },
+    {
+      name: 'Programação ',
+      icon:  EventNote,
+      route: '/programacao',
       isSubmenu: false,
     },
     {
-      name:'Aulas',
-
-      icon: Receitas,
-      route: '#',
-      isSubmenu: true,
-      submenu: [
-        {
-        name: 'Visão Geral',
-        submenuRoute: '/receitas/visaoGeral'
-        },
-       
-        {
-        name: 'Mesas',
-        submenuRoute: '/receitas/mesas'
-        },
-    ],
-   
-    
+      name: 'Transmissão Online ',
+      icon: PlayCircleFilled,      
+      route: '/streaming',
+      isSubmenu: false,
     },
    
   ],

@@ -1,5 +1,14 @@
 import * as React from "react";
-import { Typography, IconButton, Toolbar, Box, Tooltip, Avatar, Menu, MenuItem,} from "@mui/material";
+import {
+  Typography,
+  IconButton,
+  Toolbar,
+  Box,
+  Tooltip,
+  Avatar,
+  Menu,
+  MenuItem,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Container, BoxAvatar } from "./styles";
 import { styled } from "@mui/material/styles";
@@ -10,6 +19,7 @@ import { ReactComponent as Sino } from "../../../../image/sino.svg";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logoutRemoveToken } from "../../../../utils/authHelp";
+
 
 const drawerWidth = 240;
 
@@ -172,6 +182,7 @@ function AvatarAppBar(props) {
         <DrawerHeader />
         {props.children}
       </Main>
+     
     </Container>
   );
 }

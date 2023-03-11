@@ -1,15 +1,16 @@
 import TextField from "@mui/material/TextField";
-import ButtonLogin from "../../components/atoms/Button/ButtonLogin/ButtonLogin";
 import { connect } from "react-redux";
-import { registerUser } from "../../store/actions/register.actions";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Alert from "@mui/material/Alert";
+
+import "./register.css";
+import ButtonLogin from "../../components/atoms/Button/ButtonLogin/ButtonLogin";
 import Loading from "../../components/atoms/loading/Loading";
 import Logo from "../../../src/image/logo.png";
 import Icone from "../../../src/image/Icone.png";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import Utils from "../../utils/Utils";
-import Alert from "@mui/material/Alert";
-
+import { registerUser } from "../../store/actions/register.actions";
 function Register(props) {
   const navigate = useNavigate();
 
@@ -26,7 +27,7 @@ function Register(props) {
   };
 
   const register = () => {
-    if (validate(inputs)) {     
+    if (validate(inputs)) {
       props.registerUser(inputs).then(() => {
         if (props.success) {
           navigate("/dashboard");
@@ -70,7 +71,7 @@ function Register(props) {
               position: "absolute",
               backgroundColor: "236, 112, 99 ",
               fontSize: "14px",
-              color: "white",
+              color: "red",
               transform: " translate(-50%, -50%)",
               top: "31%",
               left: "45%",

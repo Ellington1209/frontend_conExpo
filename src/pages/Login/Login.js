@@ -109,7 +109,7 @@ const Login = ({ credentials, login, changeValue }) => {
           <ButtonLogin
             background="rgba(36, 113, 163 )"
             hover="rgb(33, 97, 140 )"
-            color="rgba(255, 255, 255, 1)"
+            color="rgba(255, 255, 255, 1)"          
             onClick={logar}
           >
             entrar

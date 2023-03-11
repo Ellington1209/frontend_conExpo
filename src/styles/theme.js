@@ -56,7 +56,13 @@ const theme = {
     priority5: "5",
     priority10: "10",
     priority15: "15"
-  }
+  },
+  typography: {
+    h1: {
+      fontSize: '8rem', // definição de tamanho para a variante h1
+    },
+  },
+  
 };
 
 export default theme;
